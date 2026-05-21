@@ -1,0 +1,195 @@
+#VRML_SIM R2025a utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/floors/protos/Floor.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/solids/protos/SolidBox.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/GalvanizedMetal.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/robots/universal_robots/protos/UR5e.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/devices/robotiq/protos/Robotiq3fGripper.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/factory/conveyors/protos/ConveyorBelt.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/CorrugatedMetal.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/factory/containers/protos/PlasticCrate.proto"
+
+WorldInfo {
+}
+Viewpoint {
+  orientation 0.28348552276216066 0.199960196433979 -0.9378975840817317 1.972667356467005
+  position 4.131029313724972 6.716982052024217 5.107048967348481
+}
+Solid {
+  translation 6.3 -0.83 0.661095
+  rotation -0.019359566295456057 0.9998074825534958 -0.0031945301522058127 0.000274176
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 1 1 0
+      }
+      geometry Cylinder {
+        height 0.115
+        radius 0.033
+      }
+    }
+  ]
+  name "Obj_5"
+  boundingObject Cylinder {
+    height 0.115
+    radius 0.033
+  }
+  physics Physics {
+  }
+  recognitionColors [
+    1 1 0
+  ]
+}
+Solid {
+  translation 3.5 -0.83 0.661095
+  rotation -0.019359566295456057 0.9998074825534958 -0.0031945301522058127 0.000274176
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 1 1 0
+      }
+      geometry Cylinder {
+        height 0.115
+        radius 0.033
+      }
+    }
+  ]
+  name "Obj_3"
+  boundingObject Cylinder {
+    height 0.115
+    radius 0.033
+  }
+  physics Physics {
+  }
+  recognitionColors [
+    1 1 0
+  ]
+}
+Solid {
+  translation 2.1 -0.83 0.661095
+  rotation -0.019359566295456057 0.9998074825534958 -0.0031945301522058127 0.000274176
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 1 1 0
+      }
+      geometry Cylinder {
+        height 0.115
+        radius 0.033
+      }
+    }
+  ]
+  name "Obj_2"
+  boundingObject Cylinder {
+    height 0.115
+    radius 0.033
+  }
+  physics Physics {
+  }
+  recognitionColors [
+    1 1 0
+  ]
+}
+Solid {
+  translation 0.7 -0.83 0.66
+  rotation -0.019359566295456057 0.9998074825534958 -0.0031945301522058127 0.000274176
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 1 1 0
+      }
+      geometry Cylinder {
+        height 0.115
+        radius 0.033
+      }
+    }
+  ]
+  name "Obj_1"
+  boundingObject Cylinder {
+    height 0.115
+    radius 0.033
+  }
+  physics Physics {
+  }
+  recognitionColors [
+    1 1 0
+  ]
+}
+Solid {
+  translation 4.9 -0.83 0.661095
+  rotation -0.019359566295456057 0.9998074825534958 -0.0031945301522058127 0.000274176
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.986389 0.994446 0.00450141
+      }
+      geometry Cylinder {
+        height 0.115
+        radius 0.033
+      }
+    }
+  ]
+  name "Obj_4"
+  boundingObject Cylinder {
+    height 0.115
+    radius 0.033
+  }
+  physics Physics {
+  }
+  recognitionColors [
+    1 1 0
+  ]
+}
+Floor {
+  translation 3.5 -0.5 0
+  size 10 4
+}
+PlasticCrate {
+  translation 0.06 0.47 -0.01
+  name "Obj_holder"
+  size 0.6 0.45 0.4
+  color 0.813046 0.860548 0.817502
+  mass 40
+}
+ConveyorBelt {
+  translation 3.18 -1.05 0
+  rotation 0 0 1 3.141592
+  size 8 0.7 0.6
+  appearance CorrugatedMetal {
+    colorOverride 0 0 0
+    textureTransform TextureTransform {
+      center 9 7
+      rotation -9
+      scale 6 3.1
+    }
+  }
+  borderThickness 0.09
+  borderHeight 0
+  speed 0.2
+}
+UR5e {
+  translation 0 0 0.61
+  rotation 5.67193e-08 2.39745e-09 -1 1.5708
+  controller "cont_pick_and_place_f"
+  selfCollision FALSE
+  toolSlot [
+    Robotiq3fGripper {
+    }
+    DistanceSensor {
+      translation 0 0.1 0
+      rotation 0 0 1 1.570796
+    }
+  ]
+}
+SolidBox {
+  translation -0.135 -0.0323 0.305
+  size 1.5 0.4 0.61
+  appearance GalvanizedMetal {
+  }
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}

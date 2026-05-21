@@ -1,0 +1,159 @@
+#VRML_SIM R2025a utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/floors/protos/Floor.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/ThreadMetalPlate.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/robots/universal_robots/protos/UR5e.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/devices/robotiq/protos/Robotiq3fGripper.proto"
+
+WorldInfo {
+}
+Viewpoint {
+  orientation 0.18865176442406442 -0.17774026678668942 -0.9658255066741009 4.618162084898483
+  position -0.2612882014039196 -7.05931229003154 2.610573944934545
+}
+Solid {
+  translation -0.79 -0.45 0.00999959
+  rotation 0.5773509358560258 -0.577349935856137 0.577349935856137 -2.094395307179586
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 1 1 0
+      }
+      geometry Box {
+        size 0.09 0.02 0.1
+      }
+    }
+  ]
+  name "base"
+  boundingObject Box {
+    size 0.09 0.02 0.1
+  }
+}
+Solid {
+  translation 0.408983 -0.83 0.0609627
+  rotation -0.019359566295456057 0.9998074825534958 -0.0031945301522058127 0.000274176
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 1 1 0
+      }
+      geometry Cylinder {
+        height 0.115
+        radius 0.033
+      }
+    }
+  ]
+  name "obj"
+  boundingObject Cylinder {
+    height 0.115
+    radius 0.033
+  }
+  physics Physics {
+  }
+  recognitionColors [
+    1 1 0
+  ]
+}
+Solid {
+  translation -0.79 -0.4 0.07
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 1 0 0
+      }
+      geometry Box {
+        size 0.12 0.02 0.15
+      }
+    }
+  ]
+  name "b"
+  boundingObject Box {
+    size 0.12 0.02 0.15
+  }
+}
+Solid {
+  translation -0.79 -0.5 0.07
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 1 0 0
+      }
+      geometry Box {
+        size 0.12 0.02 0.15
+      }
+    }
+  ]
+  name "f"
+  boundingObject Box {
+    size 0.12 0.02 0.15
+  }
+}
+Solid {
+  translation -0.74 -0.45 0.07
+  rotation 0 0 1 -1.5707953071795862
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 1 0 0
+      }
+      geometry Box {
+        size 0.09 0.02 0.15
+      }
+    }
+  ]
+  name "r"
+  boundingObject Box {
+    size 0.09 0.02 0.15
+  }
+}
+Solid {
+  translation -0.84 -0.45 0.07
+  rotation 0 0 1 -1.5707953071795862
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 1 0 0
+      }
+      geometry Box {
+        size 0.09 0.02 0.15
+      }
+    }
+  ]
+  name "l"
+  boundingObject Box {
+    size 0.09 0.02 0.15
+  }
+}
+UR5e {
+  rotation 5.67193e-08 2.39745e-09 -1 1.5708
+  controller "peg_in_hole_f"
+  selfCollision FALSE
+  toolSlot [
+    Camera {
+      translation 3.37098e-05 0.099967 -0.0298644
+      rotation 0.7071067811865475 0.7071067811865475 0 3.14
+      width 128
+      height 128
+      far 10
+      recognition Recognition {
+      }
+    }
+    Robotiq3fGripper {
+    }
+    DistanceSensor {
+      translation 0 0.1 0
+      rotation 0 0 1 1.570796
+    }
+  ]
+}
+Floor {
+  size 17 5
+  appearance ThreadMetalPlate {
+  }
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}

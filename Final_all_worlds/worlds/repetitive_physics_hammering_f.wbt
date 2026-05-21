@@ -1,0 +1,62 @@
+#VRML_SIM R2025a utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/floors/protos/Floor.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/ThreadMetalPlate.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/robots/universal_robots/protos/UR5e.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/factory/tools/protos/Hammer.proto"
+
+WorldInfo {
+}
+Viewpoint {
+  orientation 0.11908819046683258 -0.5370039771615489 -0.8351315653260953 5.764053857508316
+  position -4.040001875688309 -2.1887158670808815 1.169126619779744
+}
+Solid {
+  translation -0.866926 -0.3 0.00995934
+  rotation 0.14599664762614892 0.5994284553766251 -0.7870009566491767 1.1934517425774972e-16
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.992355 0.113771 0.109163
+      }
+      geometry Cylinder {
+        height 0.02
+        radius 0.04
+        subdivision 20
+      }
+    }
+  ]
+  name "obj_hammering"
+  boundingObject Cylinder {
+    height 0.02
+    radius 0.04
+  }
+  physics Physics {
+  }
+}
+UR5e {
+  rotation 5.67193e-08 2.39745e-09 -1 1.5708
+  controller "hammering_f"
+  selfCollision FALSE
+  toolSlot [
+    Hammer {
+      translation 0.06 -9.5112e-05 0.0140006
+      rotation 0.000558672739934123 0.7071066708371408 0.7071066708371408 3.14047
+    }
+    DistanceSensor {
+      translation 0 0.1 0
+      rotation 0 0 1 1.570796
+    }
+  ]
+}
+Floor {
+  size 17 5
+  appearance ThreadMetalPlate {
+  }
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}

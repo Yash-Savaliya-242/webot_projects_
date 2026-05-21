@@ -1,0 +1,94 @@
+#VRML_SIM R2025a utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/floors/protos/Floor.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/ThreadMetalPlate.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/robots/universal_robots/protos/UR5e.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/devices/robotiq/protos/Robotiq3fGripper.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/drinks/protos/Can.proto"
+
+WorldInfo {
+}
+Viewpoint {
+  orientation 0.02472952544003326 -0.05630985744285582 -0.9981070336022465 5.454054578684021
+  position -2.1230818439304473 -2.4414516416843948 0.728249995022114
+}
+Solid {
+  translation 0.52 -0.33 0.25
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0 1 1
+      }
+      geometry Box {
+        size 0.5 0.5 0.5
+      }
+    }
+  ]
+  boundingObject Box {
+    size 0.5 0.5 0.5
+  }
+  physics Physics {
+    density -1
+    mass 100
+  }
+}
+Solid {
+  translation -0.806926 -0.44959 0.010963
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0 0 0
+      }
+      geometry Cylinder {
+        height 0.02
+        radius 0.04
+        subdivision 20
+      }
+    }
+  ]
+  name "target_position"
+  boundingObject Cylinder {
+    height 0.02
+    radius 0.04
+  }
+  physics Physics {
+  }
+}
+Can {
+  translation 0.409 -0.829996 0.061
+  rotation -0.04976478031644138 0.9987555267374127 -0.00329612674656917 0.00027151845149306987
+  name "obj"
+}
+UR5e {
+  rotation 5.67193e-08 2.39745e-09 -1 1.5708
+  controller "path_planning_f"
+  selfCollision FALSE
+  toolSlot [
+    Camera {
+      translation 3.37098e-05 0.099967 -0.0298644
+      rotation 0.7071067811865475 0.7071067811865475 0 3.14
+      width 128
+      height 128
+      far 10
+      recognition Recognition {
+      }
+    }
+    Robotiq3fGripper {
+    }
+    DistanceSensor {
+      translation 0 0.1 0
+      rotation 0 0 1 1.570796
+    }
+  ]
+}
+Floor {
+  size 17 5
+  appearance ThreadMetalPlate {
+  }
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
